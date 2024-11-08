@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="edu.uga.cs.statecapitalsquiz.SplashFragment"
+        android:label="Splash Screen">
+        <action
+            android:id="@+id/action_splashFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="edu.uga.cs.statecapitalsquiz.QuizFragment"
+        android:label="Quiz Screen">
+        <action
+            android:id="@+id/action_quizFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="edu.uga.cs.statecapitalsquiz.ResultsFragment"
+        android:label="Results Screen">
+        <action
+            android:id="@+id/action_resultsFragment_to_splashFragment"
+            app:destination="@id/splashFragment" />
+    </fragment>
+</navigation>
+
